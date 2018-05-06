@@ -171,7 +171,7 @@ namespace FinalProject.Controllers
                     });
                     db.SaveChanges();
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("FindAnEvent", "Event");
                 }
                 AddErrors(result);
             }
@@ -400,7 +400,7 @@ namespace FinalProject.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("FindAnEvent", "Event");
         }
 
         //
@@ -457,7 +457,7 @@ namespace FinalProject.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("FindAnEvent", "Event");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult
