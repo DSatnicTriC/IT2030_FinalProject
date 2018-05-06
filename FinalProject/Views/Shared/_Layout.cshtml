@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - EventBrite</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -13,10 +13,11 @@
 <body>
     <div id="header">
         @Scripts.Render("~/bundles/jquery")
-        <img src="~/Images/EventBrite.jpg" />
+        @{ var url = Url.Action("FindAnEvent", "Event"); }
+        <a href="@url"><img src="~/Images/EventBrite.jpg" /></a>
         <ul id="navlist">
             <li>
-                <a href="/" id="current">Find an Event</a>
+                @Html.ActionLink("Find An Event", "FindAnEvent", "Event")
             </li>
             <li>
                 <a href="/Store/Browse">Organize an Event</a>
