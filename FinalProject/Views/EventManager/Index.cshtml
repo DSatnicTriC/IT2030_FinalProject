@@ -59,13 +59,13 @@
             @Html.DisplayFor(modelItem => item.StartDate)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.StartTime)
+            @item.StartTime.ToString("t")
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.EndDate)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.EndTime)
+            @item.EndTime.ToString("t")
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Location)

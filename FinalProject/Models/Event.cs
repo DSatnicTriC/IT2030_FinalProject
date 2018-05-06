@@ -27,7 +27,7 @@ namespace FinalProject.Models
 
         [Required]
         [DataType(DataType.Time)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:t}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:HH:mm}")]
         [Display(Name = "Start Time")]
         public virtual DateTime StartTime { get; set; }
 
@@ -39,7 +39,7 @@ namespace FinalProject.Models
 
         [Required]
         [DataType(DataType.Time)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:t}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:HH:mm}")]
         [Display(Name = "End Time")]
         public virtual DateTime EndTime { get; set; }
 
