@@ -17,7 +17,8 @@ namespace FinalProject.Controllers
         // GET: EventManager
         public ActionResult Index()
         {
-            return View(db.Events.ToList());
+            var events = db.Events.Include(x => x.EventType).Include(x => x.Organizer);
+            return View(events.ToList());
         }
 
         // GET: EventManager/Details/5
@@ -38,8 +39,8 @@ namespace FinalProject.Controllers
         // GET: EventManager/Create
         public ActionResult Create()
         {
-            ViewBag.FkEventTypeId = new SelectList(db.EventTypes, "Id", "Name");
-            ViewBag.FkOrganizerId = new SelectList(db.Users, "Id", "FullName");
+            ViewBag.EventTypeId = new SelectList(db.EventTypes, "Id", "Name");
+            ViewBag.OrganizerId = new SelectList(db.Users, "Id", "FullName");
             return View();
         }
 
@@ -48,7 +49,7 @@ namespace FinalProject.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title,Description,StartDate,StartTime,EndDate,EndTime,Location,FkOrganizerId,FkEventTypeId")] Event @event)
+        public ActionResult Create([Bind(Include = "Id,Title,Description,StartDate,StartTime,EndDate,EndTime,Location,OrganizerId,EventTypeId")] Event @event)
         {
             if (ModelState.IsValid)
             {
@@ -57,6 +58,8 @@ namespace FinalProject.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.EventTypeId = new SelectList(db.EventTypes, "Id", "Name", @event.EventTypeId);
+            ViewBag.OrganizerId = new SelectList(db.Users, "Id", "FullName", @event.OrganizerId);
             return View(@event);
         }
 
@@ -72,6 +75,8 @@ namespace FinalProject.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.EventTypeId = new SelectList(db.EventTypes, "Id", "Name", @event.EventTypeId);
+            ViewBag.OrganizerId = new SelectList(db.Users, "Id", "FullName", @event.OrganizerId);
             return View(@event);
         }
 
@@ -80,7 +85,7 @@ namespace FinalProject.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Title,Description,StartDate,StartTime,EndDate,EndTime,Location,FkOrganizerId,FkEventTypeId")] Event @event)
+        public ActionResult Edit([Bind(Include = "Id,Title,Description,StartDate,StartTime,EndDate,EndTime,Location,OrganizerId,EventTypeId")] Event @event)
         {
             if (ModelState.IsValid)
             {
@@ -88,6 +93,8 @@ namespace FinalProject.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.EventTypeId = new SelectList(db.EventTypes, "Id", "Name", @event.EventTypeId);
+            ViewBag.OrganizerId = new SelectList(db.Users, "Id", "FullName", @event.OrganizerId);
             return View(@event);
         }
 

@@ -15,6 +15,7 @@ namespace FinalProject.Models
         public virtual int Id { get; set; }
 
         [Required]
+        [Display(Name = "Event Type")]
         public virtual string Name { get; set; }
     }
 }

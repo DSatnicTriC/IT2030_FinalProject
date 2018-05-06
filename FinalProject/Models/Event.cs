@@ -27,7 +27,7 @@ namespace FinalProject.Models
 
         [Required]
         [DataType(DataType.Time)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:HH:mm}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:t}")]
         [Display(Name = "Start Time")]
         public virtual DateTime StartTime { get; set; }
 
@@ -39,7 +39,7 @@ namespace FinalProject.Models
 
         [Required]
         [DataType(DataType.Time)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:HH:mm}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:t}")]
         [Display(Name = "End Time")]
         public virtual DateTime EndTime { get; set; }
 
@@ -47,11 +47,10 @@ namespace FinalProject.Models
         public virtual string Location { get; set; }
 
         [Required]
-        [Display(Name = "Organizer")]
-        public virtual Guid FkOrganizerId { get; set; }
+        public virtual Guid OrganizerId { get; set; }
         [Required]
-        [Display(Name = "Event Type")]
-        public virtual int FkEventTypeId { get; set; }
+        public virtual int EventTypeId { get; set; }
+
         public virtual User Organizer { get; set; }
         public virtual EventType EventType { get; set; }
     }
