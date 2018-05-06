@@ -5,3 +5,12 @@
 
 <div id="findAnEventHeader">Find your next experience</div>
 
+<div id="searchControls">
+    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+    {
+        <input type="text" id="searchEventsQuery" name="searchEventsQuery" placeholder="Search Events" />
+        <input type="text" id="locationQuery" name="locationQuery" placeholder="Search Location" />
+        <input type="submit" class="btn btn--brite" value="Search" />
+    }
+</div>
+

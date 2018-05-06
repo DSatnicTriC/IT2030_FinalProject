@@ -68,5 +68,17 @@ ul#navlist li a:hover
     text-align: center;
     -webkit-font-smoothing: antialiased;
     margin-top: 15px;
+    margin-bottom: 30px;
                     
+}
+
+.btn--brite {
+    font-weight: 600;
+    color: #fff;
+    background-color: #f6682F;
+}
+
+#searchControls {
+    margin: auto;
+    text-align: center;
 }
