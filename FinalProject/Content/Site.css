@@ -82,3 +82,22 @@ ul#navlist li a:hover
     margin: auto;
     text-align: center;
 }
+#searchControls input {
+    width: 300px;
+}
+
+#allSearchResults {
+    width: 850px;
+}
+
+.searchResult {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 15px;
+    width: 400px;
+    display: inline-block
+}
+
+#bodyWrap {
+    min-height: 70vh;
+}

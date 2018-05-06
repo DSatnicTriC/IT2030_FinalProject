@@ -16,7 +16,7 @@ namespace FinalProject
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Event", action = "FindAnEvent", id = UrlParameter.Optional }
+                defaults: new { controller = "Event", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

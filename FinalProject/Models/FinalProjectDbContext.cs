@@ -19,10 +19,10 @@ namespace FinalProject.Models
         {
         }
 
-        public System.Data.Entity.DbSet<FinalProject.Models.Event> Events { get; set; }
+        public virtual System.Data.Entity.DbSet<FinalProject.Models.Event> Events { get; set; }
 
-        public System.Data.Entity.DbSet<FinalProject.Models.EventType> EventTypes { get; set; }
+        public virtual System.Data.Entity.DbSet<FinalProject.Models.EventType> EventTypes { get; set; }
 
-        public System.Data.Entity.DbSet<FinalProject.Models.User> Users { get; set; }
+        public virtual System.Data.Entity.DbSet<FinalProject.Models.User> Users { get; set; }
     }
 }

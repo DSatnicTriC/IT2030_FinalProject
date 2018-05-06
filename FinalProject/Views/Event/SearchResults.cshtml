@@ -1,0 +1,17 @@
+﻿@model IEnumerable<FinalProject.Models.Event>
+@{
+    ViewBag.Title = "SearchResults";
+}
+
+<h2>SearchResults</h2>
+
+<div id="allSearchResults">
+    @foreach (var item in Model)
+    {
+        <div class="searchResult">
+            <ul>
+                <li>@item.Title</li>
+            </ul>
+        </div>
+    }
+</div>
