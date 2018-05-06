@@ -11,28 +11,30 @@ namespace FinalProject.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public virtual int Id { get; set; }
 
         [Required]
-        public string Title { get; set; }
+        public virtual string Title { get; set; }
 
         [Required]
-        public string Description { get; set; }
+        public virtual string Description { get; set; }
 
         [Required]
-        public DateTime StartDateTime { get; set; }
+        public virtual DateTime StartDateTime { get; set; }
 
         [Required]
-        public DateTime EndDateTime { get; set; }
+        public virtual DateTime EndDateTime { get; set; }
 
         [Required]
-        public string Location { get; set; }
+        public virtual string Location { get; set; }
 
         [Required]
-        public Guid FkOrganizerId { get; set; }
+        [Display(Name = "Organizer")]
+        public virtual Guid FkOrganizerId { get; set; }
         [Required]
-        public int FkEventTypeId { get; set; }
-        public User Organizer { get; set; }
-        public EventType EventType { get; set; }
+        [Display(Name = "Event Type")]
+        public virtual int FkEventTypeId { get; set; }
+        public virtual User Organizer { get; set; }
+        public virtual EventType EventType { get; set; }
     }
 }

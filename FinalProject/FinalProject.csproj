@@ -190,6 +190,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EventManagerController.cs" />
+    <Compile Include="Controllers\EventTypeManagerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -198,6 +200,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\EventType.cs" />
+    <Compile Include="Models\FinalProjectDbContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Order.cs" />
@@ -262,6 +265,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\EventManager\Create.cshtml" />
+    <Content Include="Views\EventManager\Delete.cshtml" />
+    <Content Include="Views\EventManager\Details.cshtml" />
+    <Content Include="Views\EventManager\Edit.cshtml" />
+    <Content Include="Views\EventManager\Index.cshtml" />
+    <Content Include="Views\EventTypeManager\Create.cshtml" />
+    <Content Include="Views\EventTypeManager\Delete.cshtml" />
+    <Content Include="Views\EventTypeManager\Details.cshtml" />
+    <Content Include="Views\EventTypeManager\Edit.cshtml" />
+    <Content Include="Views\EventTypeManager\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

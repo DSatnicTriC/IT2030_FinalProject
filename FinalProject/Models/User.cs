@@ -11,12 +11,12 @@ namespace FinalProject.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid Id { get; set; }
+        public virtual Guid Id { get; set; }
 
         [Required]
-        public Guid AspNetUserId { get; set; }
+        public virtual Guid AspNetUserId { get; set; }
 
         [Required]
-        public string FullName { get; set; }
+        public virtual string FullName { get; set; }
     }
 }

@@ -11,22 +11,22 @@ namespace FinalProject.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid Id { get; set; }
+        public virtual Guid Id { get; set; }
 
         [Required]
-        public int NumberOfTickets { get; set; }
+        public virtual int NumberOfTickets { get; set; }
 
         [Required]
-        public DateTime OrderDate { get; set; }
+        public virtual DateTime OrderDate { get; set; }
 
         [Required]
-        public string OrderStatus { get; set; }
+        public virtual string OrderStatus { get; set; }
 
         [Required]
-        public int FkEventId { get; set; }
+        public virtual int FkEventId { get; set; }
         [Required]
-        public Guid FkUserWhoPlacedOrderId { get; set; }
-        public Event Event { get; set; }
-        public User UserWhoPlacedOrder { get; set; }
+        public virtual Guid FkUserWhoPlacedOrderId { get; set; }
+        public virtual Event Event { get; set; }
+        public virtual User UserWhoPlacedOrder { get; set; }
     }
 }
