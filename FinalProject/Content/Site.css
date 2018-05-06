@@ -54,3 +54,19 @@ ul#navlist li a:hover
 {
     color: #F6855E;
 }
+
+/*****End top navigation****/
+
+#findAnEventHeader {
+    line-height: 60px;
+    font-weight: 100;
+    color: #F86820;
+    font-family: Benton Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
+    font-size: 45px;
+    letter-spacing: .5px;
+    text-rendering: optimizeLegibility;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    margin-top: 15px;
+                    
+}
