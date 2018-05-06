@@ -48,7 +48,7 @@ namespace FinalProject.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title,Description,StartDateTime,EndDateTime,Location,FkOrganizerId,FkEventTypeId")] Event @event)
+        public ActionResult Create([Bind(Include = "Id,Title,Description,StartDate,StartTime,EndDate,EndTime,Location,FkOrganizerId,FkEventTypeId")] Event @event)
         {
             if (ModelState.IsValid)
             {
@@ -80,7 +80,7 @@ namespace FinalProject.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Title,Description,StartDateTime,EndDateTime,Location,FkOrganizerId,FkEventTypeId")] Event @event)
+        public ActionResult Edit([Bind(Include = "Id,Title,Description,StartDate,StartTime,EndDate,EndTime,Location,FkOrganizerId,FkEventTypeId")] Event @event)
         {
             if (ModelState.IsValid)
             {

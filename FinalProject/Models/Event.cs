@@ -20,10 +20,28 @@ namespace FinalProject.Models
         public virtual string Description { get; set; }
 
         [Required]
-        public virtual DateTime StartDateTime { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
+        [Display(Name = "Start Date")]
+        public virtual DateTime StartDate { get; set; }
 
         [Required]
-        public virtual DateTime EndDateTime { get; set; }
+        [DataType(DataType.Time)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:HH:mm}")]
+        [Display(Name = "Start Time")]
+        public virtual DateTime StartTime { get; set; }
+
+        [Required]
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
+        [Display(Name = "End Date")]
+        public virtual DateTime EndDate { get; set; }
+
+        [Required]
+        [DataType(DataType.Time)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:HH:mm}")]
+        [Display(Name = "End Time")]
+        public virtual DateTime EndTime { get; set; }
 
         [Required]
         public virtual string Location { get; set; }

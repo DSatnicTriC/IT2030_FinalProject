@@ -265,16 +265,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\EventManager\Create.cshtml" />
-    <Content Include="Views\EventManager\Delete.cshtml" />
-    <Content Include="Views\EventManager\Details.cshtml" />
-    <Content Include="Views\EventManager\Edit.cshtml" />
-    <Content Include="Views\EventManager\Index.cshtml" />
     <Content Include="Views\EventTypeManager\Create.cshtml" />
     <Content Include="Views\EventTypeManager\Delete.cshtml" />
     <Content Include="Views\EventTypeManager\Details.cshtml" />
     <Content Include="Views\EventTypeManager\Edit.cshtml" />
     <Content Include="Views\EventTypeManager\Index.cshtml" />
+    <Content Include="Views\EventManager\Create.cshtml" />
+    <Content Include="Views\EventManager\Delete.cshtml" />
+    <Content Include="Views\EventManager\Details.cshtml" />
+    <Content Include="Views\EventManager\Edit.cshtml" />
+    <Content Include="Views\EventManager\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
