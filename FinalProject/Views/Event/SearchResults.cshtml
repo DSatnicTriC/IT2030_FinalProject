@@ -3,15 +3,23 @@
     ViewBag.Title = "SearchResults";
 }
 
-<h2>SearchResults</h2>
+@{
+    var baseDetailsUrl = Url.Action("Details", "Event");
+}
+
+<h2>Search Results</h2>
 
 <div id="allSearchResults">
     @foreach (var item in Model)
     {
-        <div class="searchResult">
-            <ul>
-                <li>@item.Title</li>
-            </ul>
-        </div>
+        <a href="@baseDetailsUrl?eventId=@item.Id">
+            <div class="searchResult">
+                @item.Title
+                <ul>
+                    <li>Description: @item.Description</li>
+                    <li>Location: @item.Location</li>
+                </ul>
+            </div>
+        </a>
     }
 </div>

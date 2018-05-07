@@ -92,12 +92,26 @@ ul#navlist li a:hover
 
 .searchResult {
     border: 1px solid black;
-    padding: 5px;
-    margin: 15px;
+    padding: 15px;
+    margin: 15px 15px 15px 0;
     width: 400px;
     display: inline-block
 }
 
+.searchResult:hover {
+    transform: scale(1.02, 1.02);
+    cursor: pointer;
+}
+
+.searchResult ul {
+    margin-bottom: 0
+}
+
 #bodyWrap {
     min-height: 70vh;
+}
+
+#allSearchResults a {
+    text-decoration: none;
+    color: black;
 }
