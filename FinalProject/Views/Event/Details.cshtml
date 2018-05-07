@@ -1,8 +1,18 @@
-﻿
+﻿@model FinalProject.Models.Event
 @{
     ViewBag.Title = "Event Details";
 }
 
 <h2>Event Details</h2>
-<h3>Id: @ViewBag.Id</h3>
 
+<div id="eventDetails">
+    <div class="detailRow"><div class="detailLabel">@Html.DisplayNameFor(model => model.EventType.Name):</div> @Model.EventType.Name</div>
+    <div class="detailRow"><div class="detailLabel">@Html.DisplayName("Organizer Full Name"):</div> @Model.Organizer.FullName</div>
+    <div class="detailRow"><div class="detailLabel">@Html.DisplayNameFor(model => model.Title):</div> @Model.Title</div>
+    <div class="detailRow"><div class="detailLabel">@Html.DisplayNameFor(model => model.Description):</div> @Model.Description</div>
+    <div class="detailRow"><div class="detailLabel">@Html.DisplayNameFor(model => model.StartDate):</div> @Model.StartDate.ToString("d")</div>
+    <div class="detailRow"><div class="detailLabel">@Html.DisplayNameFor(model => model.StartTime):</div> @Model.StartTime.ToString("t")</div>
+    <div class="detailRow"><div class="detailLabel">@Html.DisplayNameFor(model => model.EndDate):</div> @Model.EndDate.ToString("d")</div>
+    <div class="detailRow"><div class="detailLabel">@Html.DisplayNameFor(model => model.EndTime):</div> @Model.EndTime.ToString("t")</div>
+    <div class="detailRow"><div class="detailLabel">@Html.DisplayNameFor(model => model.Location):</div> @Model.Location</div>
+</div>

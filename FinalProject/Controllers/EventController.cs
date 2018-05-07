@@ -47,8 +47,9 @@ namespace FinalProject.Controllers
         // GET: Event
         public ActionResult Details(int eventId)
         {
-            ViewBag.Id = eventId;
-            return View();
+            var matchingEvent = db.Events.Include(e => e.Organizer).Include(e => e.EventType)
+                .SingleOrDefault(x => x.Id == eventId);
+            return View(matchingEvent);
         }
     }
 }
