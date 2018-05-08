@@ -14,6 +14,9 @@ namespace FinalProject
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/kendoUiCore").Include(
+                "~/Scripts/kendo.ui.core*"));
+
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
@@ -26,6 +29,10 @@ namespace FinalProject
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/kendoCss").Include(
+                "~/Content/kendo.common.core.min.css",
+                "~/Content/kendo.default.min.css"));
         }
     }
 }
