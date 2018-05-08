@@ -4,6 +4,11 @@
     padding-left: 40px;
 }
 
+footer {
+    position: fixed;
+    bottom: 20px;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -129,3 +134,7 @@ ul#navlist li a:hover
         display: inline-block;
         padding-right: 15px;
     }
+
+#registerButton {
+    margin-top: 50px;
+}
