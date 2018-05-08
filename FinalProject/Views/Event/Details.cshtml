@@ -75,6 +75,26 @@
                 index: 0
             });
 
+            // checkout processing
+            $("#checkoutButton").click(function() {
+                var data = {
+                    eventId: @Model.Id,
+                    quantity: $("#ticketCountList").data("kendoDropDownList").value()
+                }
+
+                function success() {
+                    alert("made it");
+                }
+                @*$.ajax({
+                    type: "POST",
+                    url: "@Url.Action("Order", "Order")",
+                    data: data,
+                    success: success,
+                    dataType: dataType
+                });*@
+                $.post("@Url.Action("Order", "Order")", data, success);
+            });
+
         });
     </script>
 </div>

@@ -195,6 +195,7 @@
     <Compile Include="Controllers\EventTypeManagerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -308,6 +309,7 @@
     <Content Include="Views\Event\SearchResults.cshtml" />
     <Content Include="Views\Event\Details.cshtml" />
     <Content Include="Scripts\kendo.ui.core.min.js.map" />
+    <Content Include="Views\Order\Order.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
