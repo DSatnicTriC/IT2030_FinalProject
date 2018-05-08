@@ -18,13 +18,25 @@
 </div>
 <div id="registerControls">
     <div id="registerWindow">
-        Hi all
+        Sale ends on @Model.StartDate.ToString("M")
+        <div id="ticketDetails">
+            <div id="ticketInfo">
+                @Model.Title
+                <br />
+                Free
+            </div>
+            <div id="ticketCount">
+                <input id="ticketCountList" />
+            </div>
+        </div>
+        <button type="button" class="btn btn--brite" id="checkoutButton">Checkout</button>
     </div>
 
-    <button type="submit" class="btn btn--brite" id="registerButton">Register</button>
+    <button type="button" class="btn btn--brite" id="registerButton">Register</button>
 
     <script>
         $(document).ready(function () {
+            // register controls
             var registerWindow = $("#registerWindow"),
                 registerButton = $("#registerButton");
 
@@ -48,6 +60,21 @@
                 ],
                 close: onClose
             });
+
+            // numeric control in popup
+            var data = [
+                { text: "1", value: "1" },
+                { text: "2", value: "2" },
+                { text: "3", value: "3" }
+            ];
+
+            $("#ticketCountList").kendoDropDownList({
+                dataTextField: "text",
+                dataValueField: "value",
+                dataSource: data,
+                index: 0
+            });
+
         });
     </script>
 </div>

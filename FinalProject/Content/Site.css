@@ -138,3 +138,27 @@ ul#navlist li a:hover
 #registerButton {
     margin-top: 50px;
 }
+
+#registerWindow {
+    padding: 20px;
+}
+
+#ticketDetails {
+    margin: 30px 0 30px 0;
+    padding: 20px;
+    width: 90%;
+    border: 1px solid gray;
+}
+
+#ticketInfo {
+    display: inline-block;
+    width: 60%;
+    line-height: 50px;
+}
+
+#ticketCount {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -25px;
+}
