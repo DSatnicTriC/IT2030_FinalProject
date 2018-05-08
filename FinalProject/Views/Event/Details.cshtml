@@ -29,7 +29,13 @@
                 <input id="ticketCountList" />
             </div>
         </div>
-        <button type="button" class="btn btn--brite" id="checkoutButton">Checkout</button>
+        @using (Html.BeginForm("Order", "Order", FormMethod.Post, new { id = "orderForm" }))
+        {
+            @Html.AntiForgeryToken()
+            <input type="hidden" id="eventId" name="eventId"/>
+            <input type="hidden" id="quantity" name="quantity"/>
+            <button type="button" class="btn btn--brite" id="checkoutButton">Checkout</button>
+        }
     </div>
 
     <button type="button" class="btn btn--brite" id="registerButton">Register</button>
@@ -76,23 +82,10 @@
             });
 
             // checkout processing
-            $("#checkoutButton").click(function() {
-                var data = {
-                    eventId: @Model.Id,
-                    quantity: $("#ticketCountList").data("kendoDropDownList").value()
-                }
-
-                function success() {
-                    alert("made it");
-                }
-                @*$.ajax({
-                    type: "POST",
-                    url: "@Url.Action("Order", "Order")",
-                    data: data,
-                    success: success,
-                    dataType: dataType
-                });*@
-                $.post("@Url.Action("Order", "Order")", data, success);
+            $("#checkoutButton").click(function () {
+                $("#eventId").val(@Model.Id);
+                $("#quantity").val($("#ticketCountList").data("kendoDropDownList").value());
+                $("#orderForm").submit();
             });
 
         });

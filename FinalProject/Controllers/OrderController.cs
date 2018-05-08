@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace FinalProject.Controllers
 {
+    [Authorize]
     public class OrderController : Controller
     {
-        // GET: Order
-        public ActionResult Order(int eventId, int quantity)
+        public ActionResult Order(int? eventId, int? quantity)
         {
             return View();
         }
